@@ -248,7 +248,8 @@ section#emer-contact div {
       display: inline-block; }
 
 footer {
-  padding: 34px 24px 65px 24px; }
+  padding: 34px 24px 65px 24px;
+  background-color: #F2F2F2; }
   footer div:first-of-type {
     padding-bottom: 49px; }
     footer div:first-of-type p {
@@ -268,7 +269,8 @@ footer {
         color: #333333; }
 
 .twitter-icon {
-  height: 17px;
+  height: 1rem;
+  width: 1rem;
   fill: #333333;
   border: 1px solid #333333;
   margin-right: 10px;
