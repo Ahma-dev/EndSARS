@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 29rem;
+  grid-template-areas: 'main' 'footer'; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header nav, header .donate-btn {
+    display: none; }
+
+main {
+  grid-area: main; }
+
+#demands ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  column-gap: 90px;
+  row-gap: 60px;
+  grid-auto-rows: 19.7rem; }
+  #demands ul li {
+    display: grid;
+    grid-template-rows: 13.6rem 1fr;
+    grid-template-areas: 'img' 'text'; }
+    #demands ul li img {
+      grid-area: img; }
+    #demands ul li p {
+      grid-area: text; }
+
+#protest-news ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-auto-rows: 31.8rem;
+  row-gap: 82px;
+  column-gap: 52px; }
+  #protest-news ul li {
+    display: grid; }
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff; }
+
+h2, h3, h4, p {
+  color: #333333; }
+
+h2 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.25rem; }
+
+h4 {
+  font-weight: 700;
+  font-size: 1.5rem; }
+
+p {
+  font-size: 0.9rem;
+  color: #666666; }
+
+a.donate-btn, a.signup-btn {
+  padding: 15px 24px;
+  background-color: #B51717;
+  color: #ffffff; }
+
+header {
+  position: absolute;
+  width: 100%;
+  padding: 12px 24px; }
+  header .logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff; }
+  header button {
+    appearance: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none; }
+    header button hr {
+      width: 100%;
+      border: 1px solid #ffffff;
+      margin: 3px 0; }
+
+section#about {
+  background: no-repeat center/cover url(../img/fistmobile.png);
+  padding: 100px 24px 43px 31px; }
+  section#about p {
+    color: #ffffff;
+    margin: 19px 0; }
+  section#about div div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3rem; }
+    section#about div div a {
+      color: #ffffff;
+      font-weight: 700; }
+      section#about div div a:first-of-type {
+        margin-right: 26px; }
+  section#about .about__img {
+    display: none; }
+
+div.endsars {
+  padding: 0 9px;
+  margin: 15px 0; }
+  div.endsars p {
+    text-align: center;
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #333333;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #333333; }
+
+section#wwaff div img {
+  width: 100%; }
+section#wwaff div:nth-of-type(2) {
+  padding: 44px 0 36px 0;
+  background-color: #F2F2F2; }
+  section#wwaff div:nth-of-type(2) div {
+    padding: 0 43px 0 29px; }
+    section#wwaff div:nth-of-type(2) div p {
+      margin-top: 18.5px; }
+
+section#heroes-stories div img {
+  width: 100%; }
+section#heroes-stories div:nth-of-type(2) {
+  padding: 44px 0 90px 0;
+  background-color: #F2F2F2; }
+  section#heroes-stories div:nth-of-type(2) div {
+    padding: 0 43px 0 29px; }
+    section#heroes-stories div:nth-of-type(2) div p {
+      margin-top: 18.5px; }
+
+section#demands {
+  text-align: center; }
+  section#demands h3 {
+    color: #B51717;
+    font-weight: 700;
+    font-size: 1.5rem; }
+  section#demands ul {
+    padding: 0 24px;
+    padding-top: 26px; }
+    section#demands ul li {
+      background-color: #F2F2F2; }
+      section#demands ul li div {
+        overflow: hidden; }
+        section#demands ul li div img {
+          width: 100%; }
+      section#demands ul li p {
+        font-size: 1.3rem;
+        margin-top: 16px;
+        font-weight: 700;
+        color: #333333; }
+
+section#protest-news ul {
+  padding: 58px 24px 50px 24px; }
+  section#protest-news ul li {
+    text-align: left; }
+    section#protest-news ul li div {
+      overflow: hidden; }
+      section#protest-news ul li div img {
+        width: 100%; }
+    section#protest-news ul li h4 {
+      font-size: 2.01rem;
+      font-weight: 700;
+      margin: 23px 0 6.3px 0; }
+    section#protest-news ul li p:first-of-type {
+      color: #333333;
+      margin-bottom: 7.25px; }
+    section#protest-news ul li p a {
+      color: #333333;
+      font-weight: 700; }
+      section#protest-news ul li p a:hover {
+        color: #B51717; }
+
+section#newsletter {
+  background: no-repeat center/cover url(../img/newsletterbgmobile.png);
+  padding: 58px 24px 25px 24px; }
+  section#newsletter h3 {
+    font-size: 2.25rem;
+    color: #ffffff;
+    font-weight: 700; }
+  section#newsletter p {
+    color: #ffffff;
+    margin: 19px 0; }
+  section#newsletter input {
+    width: 18.9rem;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 15px 0;
+    padding-left: 24px;
+    margin-bottom: 19px;
+    color: #666666;
+    background-color: #ffffff;
+    border: none; }
+  section#newsletter a {
+    display: inline-block; }
+
+section#emer-contact div {
+  padding: 70px 24px 86px 24px;
+  text-align: left; }
+  section#emer-contact div div {
+    padding: 0; }
+    section#emer-contact div div:first-of-type {
+      margin-bottom: 66px; }
+      section#emer-contact div div:first-of-type h3 {
+        font-size: 3rem;
+        color: #B51717;
+        font-weight: 700; }
+      section#emer-contact div div:first-of-type div {
+        margin: 35px 0; }
+        section#emer-contact div div:first-of-type div p {
+          margin: 30px 0;
+          font-weight: 700; }
+          section#emer-contact div div:first-of-type div p span {
+            color: #B51717;
+            font-weight: 700; }
+    section#emer-contact div div:last-child h4 {
+      margin-bottom: 14px; }
+    section#emer-contact div div:last-child form label {
+      font-size: 1.13rem; }
+    section#emer-contact div div:last-child form input {
+      width: 100%;
+      background-color: #F2F2F2;
+      height: 3rem;
+      margin-bottom: 14px;
+      margin-top: 10px;
+      border: none; }
+    section#emer-contact div div:last-child form a {
+      padding: 15px 24px;
+      background-color: #B51717;
+      color: #ffffff;
+      display: inline-block; }
+
+footer {
+  padding: 34px 24px 65px 24px; }
+  footer div:first-of-type {
+    padding-bottom: 49px; }
+    footer div:first-of-type p {
+      margin-top: 26px;
+      padding-right: 61px; }
+  footer div:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px; }
+    footer div:nth-of-type(2) div:nth-of-type(2) {
+      display: block; }
+    footer div:nth-of-type(2) ul {
+      margin-top: 21px; }
+      footer div:nth-of-type(2) ul li {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: #333333; }
+
+.twitter-icon {
+  height: 17px;
+  fill: #333333;
+  border: 1px solid #333333;
+  margin-right: 10px;
+  flex: 0 0 auto; }
+
+/*# sourceMappingURL=main.css.map */
