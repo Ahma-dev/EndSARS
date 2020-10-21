@@ -19,16 +19,69 @@ header {
   align-items: center; }
   header nav, header .donate-btn {
     display: none; }
+    @media (min-width: 48rem) {
+      header nav, header .donate-btn {
+        display: inline-block; } }
+  @media (min-width: 48rem) {
+    header div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; } }
+  header div nav {
+    margin-left: auto; }
+    header div nav ul {
+      display: flex;
+      align-items: center; }
 
 main {
   grid-area: main; }
 
+@media (min-width: 48rem) {
+  section#about {
+    display: grid;
+    grid-template-columns: 26rem 1fr; } }
+section#about div div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+section#about .about__img {
+  display: none; }
+  @media (min-width: 48rem) {
+    section#about .about__img {
+      display: block;
+      justify-self: end; } }
+
+@media (min-width: 48rem) {
+  section#wwaff {
+    display: grid;
+    grid-template-columns: 25rem 1fr; } }
+@media (min-width: 64rem) {
+  section#wwaff {
+    grid-template-columns: 1fr 39.25rem; } }
+
+@media (min-width: 48rem) {
+  section#heroes-stories {
+    display: grid;
+    grid-template-columns: 1fr 25rem;
+    grid-template-areas: 'text image'; } }
+@media (min-width: 64rem) {
+  section#heroes-stories {
+    grid-template-columns: 1fr 39.25rem; } }
+section#heroes-stories div:first-of-type {
+  grid-area: image; }
+section#heroes-stories div:last-of-type {
+  grid-area: text; }
+
 #demands ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-  column-gap: 90px;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 21rem));
+  justify-content: center;
+  column-gap: 20px;
   row-gap: 60px;
   grid-auto-rows: 19.7rem; }
+  @media (min-width: 64rem) {
+    #demands ul {
+      column-gap: 90px; } }
   #demands ul li {
     display: grid;
     grid-template-rows: 13.6rem 1fr;
@@ -40,17 +93,45 @@ main {
 
 #protest-news ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-  grid-auto-rows: 31.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 21rem));
+  justify-content: center;
+  grid-auto-rows: 31.7rem;
   row-gap: 82px;
-  column-gap: 52px; }
+  column-gap: 20px; }
+  @media (min-width: 64rem) {
+    #protest-news ul {
+      column-gap: 90px; } }
   #protest-news ul li {
     display: grid; }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #ffffff; }
+@media (min-width: 48rem) {
+  #emer-contact div.outer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px; } }
+
+@media (min-width: 48rem) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    column-gap: 50px; } }
+footer div:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px; }
+
+#shared-experience ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 21rem));
+  justify-content: center;
+  grid-auto-rows: 31.7rem;
+  row-gap: 82px;
+  column-gap: 20px; }
+  @media (min-width: 64rem) {
+    #shared-experience ul {
+      column-gap: 90px; } }
+  #shared-experience ul li {
+    display: grid; }
 
 h2, h3, h4, p {
   color: #333333; }
@@ -67,20 +148,52 @@ h4 {
 p {
   font-size: 0.9rem;
   color: #666666; }
+  @media (min-width: 48rem) {
+    p {
+      font-size: 1rem;
+      line-height: 22px; } }
 
 a.donate-btn, a.signup-btn {
-  padding: 15px 24px;
+  width: 127px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #B51717;
   color: #ffffff; }
+  a.donate-btn svg, a.signup-btn svg {
+    width: 6px;
+    height: 12px;
+    margin-left: 19px; }
+    a.donate-btn svg path, a.signup-btn svg path {
+      stroke: #ffffff; }
 
 header {
   position: absolute;
   width: 100%;
   padding: 12px 24px; }
-  header .logo {
+  @media (min-width: 48rem) {
+    header {
+      padding: 20px 50px 20px 24px; } }
+  @media (min-width: 64rem) {
+    header {
+      padding: 20px 144px 20px 120px; } }
+  header div .logo {
     font-size: 2rem;
     font-weight: 800;
     color: #ffffff; }
+    @media (min-width: 48rem) {
+      header div .logo {
+        color: #333333; } }
+  header div nav ul li {
+    font-size: 0.9rem;
+    color: #666666;
+    margin: 0 23px; }
+  header a.donate-btn {
+    display: none; }
+    @media (min-width: 48rem) {
+      header a.donate-btn {
+        display: flex; } }
   header button {
     appearance: none;
     display: flex;
@@ -90,6 +203,9 @@ header {
     width: 1.5rem;
     height: 1.5rem;
     border: none; }
+    @media (min-width: 48rem) {
+      header button {
+        display: none; } }
     header button hr {
       width: 100%;
       border: 1px solid #ffffff;
@@ -97,27 +213,55 @@ header {
 
 section#about {
   background: no-repeat center/cover url(../img/fistmobile.png);
-  padding: 100px 24px 43px 31px; }
+  padding: 100px 24px 43px 24px; }
+  @media (min-width: 48rem) {
+    section#about {
+      background: none;
+      padding: 0 24px 0 24px; } }
+  @media (min-width: 64rem) {
+    section#about {
+      padding: 0 120px 0 120px; } }
+  section#about div.text {
+    max-width: 32rem;
+    margin: 0 auto; }
+    @media (min-width: 48rem) {
+      section#about div.text {
+        padding-top: 130px; } }
+    section#about div.text h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffffff; }
+      @media (min-width: 48rem) {
+        section#about div.text h1 {
+          color: #333333;
+          font-size: 4rem; } }
   section#about p {
     color: #ffffff;
     margin: 19px 0; }
+    @media (min-width: 48rem) {
+      section#about p {
+        color: #333333;
+        width: 24.94rem; } }
   section#about div div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     height: 3rem; }
     section#about div div a {
       color: #ffffff;
       font-weight: 700; }
-      section#about div div a:first-of-type {
-        margin-right: 26px; }
-  section#about .about__img {
-    display: none; }
+      section#about div div a:last-of-type {
+        margin-left: 26px; }
+        @media (min-width: 48rem) {
+          section#about div div a:last-of-type {
+            color: #333333; } }
+  @media (min-width: 48rem) {
+    section#about .about__img {
+      background: no-repeat bottom/auto 90% url(../img/fist.png), no-repeat center/cover url(../img/fistmobile.png);
+      width: 22.6rem; } }
 
 div.endsars {
   padding: 0 9px;
-  margin: 15px 0; }
+  margin: 31px 0; }
   div.endsars p {
+    line-height: normal;
     text-align: center;
     font-size: 4.8rem;
     font-weight: 700;
@@ -125,26 +269,88 @@ div.endsars {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #333333; }
+    @media (min-width: 48rem) {
+      div.endsars p {
+        font-size: 8rem; } }
+    @media (min-width: 64rem) {
+      div.endsars p {
+        font-size: 10rem; } }
+    @media (max-width: 25rem) {
+      div.endsars p {
+        font-size: 4.3rem; } }
 
-section#wwaff div img {
-  width: 100%; }
-section#wwaff div:nth-of-type(2) {
-  padding: 44px 0 36px 0;
+section#wwaff {
   background-color: #F2F2F2; }
-  section#wwaff div:nth-of-type(2) div {
-    padding: 0 43px 0 29px; }
-    section#wwaff div:nth-of-type(2) div p {
-      margin-top: 18.5px; }
+  @media (min-width: 48rem) {
+    section#wwaff {
+      background-color: transparent;
+      padding-right: 24px; } }
+  @media (min-width: 64rem) {
+    section#wwaff {
+      padding-right: 120px; } }
+  @media (min-width: 48rem) {
+    section#wwaff div.image {
+      background: no-repeat center/cover url(../img/ladyfistupimage.png); } }
+  section#wwaff div.image img {
+    width: 100%; }
+    @media (min-width: 48rem) {
+      section#wwaff div.image img {
+        display: none; } }
+  section#wwaff div:nth-of-type(2) {
+    padding: 44px 0 36px 0;
+    margin: 0 auto; }
+    @media (min-width: 48rem) {
+      section#wwaff div:nth-of-type(2) {
+        padding: 0;
+        margin: 0;
+        max-width: 43.2rem; } }
+    @media (min-width: 48rem) {
+      section#wwaff div:nth-of-type(2) h2 {
+        padding: 16px 0 16px 82px;
+        text-align: left; } }
+    section#wwaff div:nth-of-type(2) div {
+      padding: 40px 43px 0 29px; }
+      @media (min-width: 48rem) {
+        section#wwaff div:nth-of-type(2) div {
+          background-color: #F2F2F2;
+          padding: 81px 51px 94px 82px; } }
 
-section#heroes-stories div img {
-  width: 100%; }
-section#heroes-stories div:nth-of-type(2) {
-  padding: 44px 0 90px 0;
+section#heroes-stories {
   background-color: #F2F2F2; }
-  section#heroes-stories div:nth-of-type(2) div {
-    padding: 0 43px 0 29px; }
-    section#heroes-stories div:nth-of-type(2) div p {
-      margin-top: 18.5px; }
+  @media (min-width: 48rem) {
+    section#heroes-stories {
+      background-color: transparent;
+      padding-left: 24px; } }
+  @media (min-width: 64rem) {
+    section#heroes-stories {
+      padding-left: 120px; } }
+  @media (min-width: 48rem) {
+    section#heroes-stories div.image {
+      background: no-repeat center/cover url(../img/fallenheroesnames.png); } }
+  section#heroes-stories div.image img {
+    width: 100%; }
+    @media (min-width: 48rem) {
+      section#heroes-stories div.image img {
+        display: none; } }
+  section#heroes-stories div:nth-of-type(2) {
+    padding: 44px 0 90px 0;
+    max-width: 32rem;
+    margin: 0 auto; }
+    @media (min-width: 48rem) {
+      section#heroes-stories div:nth-of-type(2) {
+        padding: 0;
+        margin: 0;
+        max-width: 43.2rem; } }
+    @media (min-width: 48rem) {
+      section#heroes-stories div:nth-of-type(2) h2 {
+        padding: 16px 0 16px 51px;
+        text-align: left; } }
+    section#heroes-stories div:nth-of-type(2) div {
+      padding: 40px 43px 0 29px; }
+      @media (min-width: 48rem) {
+        section#heroes-stories div:nth-of-type(2) div {
+          background-color: #F2F2F2;
+          padding: 81px 82px 94px 51px; } }
 
 section#demands {
   text-align: center; }
@@ -155,6 +361,9 @@ section#demands {
   section#demands ul {
     padding: 0 24px;
     padding-top: 26px; }
+    @media (min-width: 48rem) {
+      section#demands ul {
+        padding-top: 60px; } }
     section#demands ul li {
       background-color: #F2F2F2; }
       section#demands ul li div {
@@ -162,13 +371,17 @@ section#demands {
         section#demands ul li div img {
           width: 100%; }
       section#demands ul li p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-top: 16px;
         font-weight: 700;
-        color: #333333; }
+        color: #333333;
+        padding: 0 20px; }
 
 section#protest-news ul {
   padding: 58px 24px 50px 24px; }
+  @media (min-width: 48rem) {
+    section#protest-news ul {
+      padding-bottom: 130px; } }
   section#protest-news ul li {
     text-align: left; }
     section#protest-news ul li div {
@@ -176,9 +389,12 @@ section#protest-news ul {
       section#protest-news ul li div img {
         width: 100%; }
     section#protest-news ul li h4 {
-      font-size: 2.01rem;
+      font-size: 1.6rem;
       font-weight: 700;
       margin: 23px 0 6.3px 0; }
+      @media (min-width: 48rem) {
+        section#protest-news ul li h4 {
+          font-size: 2rem; } }
     section#protest-news ul li p:first-of-type {
       color: #333333;
       margin-bottom: 7.25px; }
@@ -187,78 +403,154 @@ section#protest-news ul {
       font-weight: 700; }
       section#protest-news ul li p a:hover {
         color: #B51717; }
+        section#protest-news ul li p a:hover svg path {
+          stroke: #B51717; }
+      section#protest-news ul li p a svg {
+        width: 6px;
+        height: 12px;
+        margin-left: 7px; }
+        section#protest-news ul li p a svg path {
+          stroke: #333333; }
 
 section#newsletter {
   background: no-repeat center/cover url(../img/newsletterbgmobile.png);
   padding: 58px 24px 25px 24px; }
-  section#newsletter h3 {
-    font-size: 2.25rem;
-    color: #ffffff;
-    font-weight: 700; }
-  section#newsletter p {
-    color: #ffffff;
-    margin: 19px 0; }
-  section#newsletter input {
-    width: 18.9rem;
-    height: 3rem;
-    font-size: 1rem;
-    padding: 15px 0;
-    padding-left: 24px;
-    margin-bottom: 19px;
-    color: #666666;
-    background-color: #ffffff;
-    border: none; }
-  section#newsletter a {
-    display: inline-block; }
+  @media (min-width: 48rem) {
+    section#newsletter {
+      background: no-repeat center/cover url(../img/newsletterbg.png);
+      padding: 55px 24px 55px 24px; } }
+  section#newsletter div {
+    max-width: 38.5rem;
+    margin: 0 auto;
+    text-align: center; }
+    section#newsletter div h3 {
+      font-size: 2.25rem;
+      color: #ffffff;
+      font-weight: 700; }
+    section#newsletter div p {
+      color: #ffffff;
+      margin: 19px 0; }
+    section#newsletter div form {
+      text-align: left;
+      display: inline-block; }
+      section#newsletter div form input {
+        width: 18.9rem;
+        height: 3rem;
+        font-size: 1rem;
+        padding: 15px 0;
+        padding-left: 24px;
+        margin-bottom: 19px;
+        color: #666666;
+        background-color: #ffffff;
+        border: none; }
+        @media (min-width: 48rem) {
+          section#newsletter div form input {
+            width: 27.75rem; } }
+      section#newsletter div form svg {
+        width: 6px;
+        height: 12px;
+        margin-left: 19px; }
+        section#newsletter div form svg path {
+          stroke: #ffffff; }
 
-section#emer-contact div {
-  padding: 70px 24px 86px 24px;
-  text-align: left; }
-  section#emer-contact div div {
-    padding: 0; }
-    section#emer-contact div div:first-of-type {
-      margin-bottom: 66px; }
-      section#emer-contact div div:first-of-type h3 {
+section#emer-contact {
+  padding: 0 24px; }
+  @media (min-width: 64rem) {
+    section#emer-contact {
+      padding: 70px 120px; } }
+  section#emer-contact div.outer {
+    padding: 70px 0 86px 0;
+    max-width: 32rem;
+    margin: 0 auto;
+    text-align: left; }
+    @media (min-width: 48rem) {
+      section#emer-contact div.outer {
+        max-width: none; } }
+    section#emer-contact div.outer address {
+      margin-bottom: 66px;
+      font-style: initial; }
+      section#emer-contact div.outer address a {
         font-size: 3rem;
         color: #B51717;
         font-weight: 700; }
-      section#emer-contact div div:first-of-type div {
+      section#emer-contact div.outer address div {
         margin: 35px 0; }
-        section#emer-contact div div:first-of-type div p {
+        section#emer-contact div.outer address div p {
           margin: 30px 0;
           font-weight: 700; }
-          section#emer-contact div div:first-of-type div p span {
+          section#emer-contact div.outer address div p span {
             color: #B51717;
             font-weight: 700; }
-    section#emer-contact div div:last-child h4 {
+      section#emer-contact div.outer address div.twitter {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        margin-top: 17px; }
+        section#emer-contact div.outer address div.twitter div {
+          width: 49px;
+          height: 49px;
+          border-radius: 50%;
+          margin: 0;
+          margin-right: 17px;
+          background-color: #B51717;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          section#emer-contact div.outer address div.twitter div svg {
+            width: 22px; }
+            section#emer-contact div.outer address div.twitter div svg path {
+              stroke: #ffffff;
+              width: 22px; }
+    section#emer-contact div.outer div h4 {
       margin-bottom: 14px; }
-    section#emer-contact div div:last-child form label {
+    section#emer-contact div.outer div form label {
       font-size: 1.13rem; }
-    section#emer-contact div div:last-child form input {
+    section#emer-contact div.outer div form input {
       width: 100%;
       background-color: #F2F2F2;
       height: 3rem;
       margin-bottom: 14px;
       margin-top: 10px;
       border: none; }
-    section#emer-contact div div:last-child form a {
+    section#emer-contact div.outer div form a {
       padding: 15px 24px;
       background-color: #B51717;
       color: #ffffff;
       display: inline-block; }
+      section#emer-contact div.outer div form a svg {
+        width: 6px;
+        height: 12px;
+        margin-left: 19px; }
+        section#emer-contact div.outer div form a svg path {
+          stroke: #ffffff; }
 
 footer {
   padding: 34px 24px 65px 24px;
   background-color: #F2F2F2; }
+  @media (min-width: 48rem) {
+    footer {
+      padding: 95px 120px 65px 95px; } }
   footer div:first-of-type {
-    padding-bottom: 49px; }
+    padding-bottom: 49px;
+    max-width: 32rem;
+    margin: 0 auto; }
+    @media (min-width: 48rem) {
+      footer div:first-of-type {
+        padding-bottom: 0; } }
     footer div:first-of-type p {
       margin-top: 26px;
       padding-right: 61px; }
   footer div:nth-of-type(2) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px; }
+    max-width: 32rem;
+    margin: 0 auto; }
+    @media (min-width: 48rem) {
+      footer div:nth-of-type(2) {
+        margin: 0; } }
+    footer div:nth-of-type(2) div:first-of-type {
+      padding-bottom: 0;
+      max-width: none;
+      margin: 0; }
     footer div:nth-of-type(2) div:nth-of-type(2) {
       display: block; }
     footer div:nth-of-type(2) ul {
@@ -266,7 +558,14 @@ footer {
       footer div:nth-of-type(2) ul li {
         margin: 10px 0;
         font-size: 1rem;
-        color: #333333; }
+        color: #333333;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+        footer div:nth-of-type(2) ul li svg {
+          margin-right: 6px; }
+          footer div:nth-of-type(2) ul li svg path {
+            stroke: #333333; }
 
 .twitter-icon {
   height: 1rem;

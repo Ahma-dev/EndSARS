@@ -1,0 +1,69 @@
+header div .logo {
+  color: #333333; }
+header button hr {
+  border-color: #333333; }
+
+main {
+  padding: 0 24px;
+  padding-top: 129px; }
+  @media (min-width: 64rem) {
+    main {
+      padding: 0 120px;
+      padding-top: 129px; } }
+
+@media (min-width: 48rem) {
+  section#shared-experience div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; } }
+section#shared-experience div h2 {
+  text-align: left; }
+section#shared-experience div a.sh-expe {
+  width: 205px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #005A00;
+  color: #ffffff;
+  margin-top: 13px; }
+  @media (min-width: 48rem) {
+    section#shared-experience div a.sh-expe {
+      margin-top: 0; } }
+section#shared-experience ul {
+  padding-top: 58px;
+  padding-bottom: 50px; }
+  @media (min-width: 48rem) {
+    section#shared-experience ul {
+      padding-bottom: 130px; } }
+  section#shared-experience ul li {
+    text-align: left; }
+    section#shared-experience ul li div {
+      overflow: hidden; }
+      section#shared-experience ul li div img {
+        width: 100%; }
+    section#shared-experience ul li h4 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 23px 0 6.3px 0; }
+      @media (min-width: 48rem) {
+        section#shared-experience ul li h4 {
+          font-size: 2rem; } }
+    section#shared-experience ul li p:first-of-type {
+      color: #333333;
+      margin-bottom: 7.25px; }
+    section#shared-experience ul li p a {
+      color: #333333;
+      font-weight: 700; }
+      section#shared-experience ul li p a:hover {
+        color: #B51717; }
+        section#shared-experience ul li p a:hover svg path {
+          stroke: #B51717; }
+      section#shared-experience ul li p a svg {
+        width: 6px;
+        height: 12px;
+        margin-left: 7px; }
+        section#shared-experience ul li p a svg path {
+          stroke: #333333; }
+
+/*# sourceMappingURL=sharedexperiences.css.map */

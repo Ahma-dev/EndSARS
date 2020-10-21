@@ -1,0 +1,203 @@
+@import "_variables.scss";
+
+@mixin media-min-width($width) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin media-max-width($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+
+body {
+    display: grid;
+    // grid-template-rows: 3rem 1fr 29rem;
+    grid-template-rows: 1fr 29rem;
+    grid-template-areas: //'header'
+                         'main'
+                         'footer';
+}
+
+header {
+    // grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    nav, .donate-btn {
+        display: none;
+
+        @include media-min-width(48rem) {
+            display: inline-block;
+        }
+    }
+
+    div {
+        @include media-min-width(48rem) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        nav {
+            margin-left: auto;
+            ul {
+                display: flex;
+                align-items: center;
+            } 
+        }
+    }
+}
+
+main {
+    grid-area: main;
+}
+
+section#about {
+    @include media-min-width(48rem) {
+        display: grid;
+        grid-template-columns: 26rem 1fr;
+    }
+    
+    div div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+   .about__img {
+       display: none;
+       @include media-min-width(48rem) {
+            display: block;
+            justify-self: end;
+        }
+   } 
+}
+
+section#wwaff {
+    @include media-min-width(48rem) {
+        display: grid;
+        grid-template-columns: 25rem 1fr;
+    }
+
+    @include media-min-width(64rem) {
+        grid-template-columns: 1fr 39.25rem;
+    }
+}
+
+section#heroes-stories {
+    @include media-min-width(48rem) {
+        display: grid;
+        grid-template-columns: 1fr 25rem;
+        grid-template-areas: 'text image';
+    }
+
+    @include media-min-width(64rem) {
+        grid-template-columns: 1fr 39.25rem;
+    }
+
+    div:first-of-type {
+        grid-area: image;
+    }
+
+    div:last-of-type {
+        grid-area: text;
+    }
+
+}
+
+#demands {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 21rem));
+        justify-content: center;
+        column-gap: 20px;
+        row-gap: 60px;
+        grid-auto-rows: 19.7rem;
+
+        @include media-min-width(64rem) {
+            column-gap: 90px;
+        }
+
+        li {
+            display: grid;
+            grid-template-rows: 13.6rem 1fr;
+            grid-template-areas: 'img'
+                                 'text';
+
+            img {
+                grid-area: img;
+            }
+            p {
+                grid-area: text;
+            }
+        }
+    }
+}
+
+#protest-news {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 21rem));
+        justify-content: center;
+        grid-auto-rows: 31.7rem;
+        row-gap: 82px;
+        column-gap: 20px;
+
+        @include media-min-width(64rem) {
+            column-gap: 90px;
+        }
+
+        li {
+            display: grid;
+        }
+    }
+}
+ 
+#emer-contact {
+    div.outer {
+        @include media-min-width(48rem) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+        }
+    }
+}
+
+footer {
+    @include media-min-width(48rem) {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        column-gap: 50px;
+    }
+
+    div:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+}
+
+// Shared Experience Page 
+
+#shared-experience {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 21rem));
+        justify-content: center;
+        grid-auto-rows: 31.7rem;
+        row-gap: 82px;
+        column-gap: 20px;
+
+        @include media-min-width(64rem) {
+            column-gap: 90px;
+        }
+
+        li {
+            display: grid;
+        }
+    }
+}
