@@ -1,9 +1,3 @@
-@media (min-width: 48rem) {
-  header {
-    padding: 20px 24px 20px 24px; } }
-@media (min-width: 64rem) {
-  header {
-    padding: 20px 120px 20px 120px; } }
 header div .logo {
   color: #333333; }
 header button hr {
@@ -11,13 +5,11 @@ header button hr {
 
 main {
   padding: 0 24px;
-  padding-top: 129px;
-  padding-bottom: 153px; }
+  padding-top: 129px; }
   @media (min-width: 64rem) {
     main {
       padding: 0 120px;
-      padding-top: 129px;
-      padding-bottom: 153px; } }
+      padding-top: 129px; } }
 
 @media (min-width: 48rem) {
   section#shared-experience div {
@@ -73,30 +65,5 @@ section#shared-experience ul {
         margin-left: 7px; }
         section#shared-experience ul li p a svg path {
           stroke: #333333; }
-section#shared-experience div.navigation {
-  display: flex;
-  justify-content: space-between; }
-  @media (min-width: 48rem) {
-    section#shared-experience div.navigation {
-      width: 20.7rem;
-      margin-left: auto; } }
-  section#shared-experience div.navigation a {
-    width: 7.94rem;
-    height: 2.93rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #B51717;
-    color: #ffffff; }
-    section#shared-experience div.navigation a.prev svg {
-      transform: rotate(180deg);
-      margin-right: 19px;
-      margin-left: 0; }
-    section#shared-experience div.navigation a svg {
-      width: 6px;
-      height: 12px;
-      margin-left: 19px; }
-      section#shared-experience div.navigation a svg path {
-        stroke: #ffffff; }
 
-/*# sourceMappingURL=sharedexperiences.css.map */
+/*# sourceMappingURL=sharedexperiences.cssemergencycontact.map */

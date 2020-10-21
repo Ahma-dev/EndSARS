@@ -1,0 +1,263 @@
+@import "_variables.scss";
+
+@mixin media-min-width($width) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin media-max-width($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+header {
+    @include media-min-width(48rem) {
+        padding: 20px 24px 20px 24px;
+    }
+
+    @include media-min-width(64rem) {
+        padding: 20px 120px 20px 120px;
+    }
+
+    div .logo {
+       color: $black-color;
+   }
+
+   button hr {
+       border-color: $black-color;
+   }
+}
+
+main {
+    padding: 0 24px;
+    padding-top: 129px;
+    
+    @include media-min-width(64rem) {
+        padding: 0 120px;
+        padding-top: 129px;
+        padding-bottom: 153px;
+    }
+}
+
+section#top-vid {
+    div:first-of-type {
+        @include media-min-width(48rem) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        a.media{
+            width: 205px;
+            height: 47px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $green-color;
+            color: $white-colour;
+            margin-top: 13px;
+
+            @include media-min-width(48rem) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    div:last-of-type {
+        width: 100%;
+        margin-top: 43px;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        div.overlay {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 0;
+            cursor: pointer;
+            
+            div {
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 50%;position: absolute;
+                border: 2px solid white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 0;
+    
+                @include media-min-width(48rem) {
+                    width: 4.3rem;
+                    height: 3.3rem;
+                }
+    
+                svg {
+                    width: 1.1rem;
+                    height: 1.1rem;
+                    margin-left: 4px;
+                    
+                    @include media-min-width(48rem) {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
+
+                    path {
+                        stroke: $white-colour;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section#videos {
+    margin-top: 90px;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    ul {
+
+        li {
+
+            width: 100%;
+            max-width: 20.44rem;
+            position: relative;
+            overflow: hidden;
+    
+            &:hover {
+                display: grid;
+                grid-template-rows: 16.69rem 5.25rem;
+                grid-template-areas: 'image'
+                                     'details';
+
+                
+                div.image {
+                    grid-area: image;
+                }
+
+                div.details {
+                    grid-area: details;
+                    display: grid;
+                }
+            }
+
+            div.image {
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                overflow: hidden;
+                height: 100%;
+                position: relative;
+
+                img {
+                    height: 21.94rem;
+                }
+        
+                div.overlay {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    margin-top: 0;
+                    cursor: pointer;
+                    
+                    div {
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        border-radius: 50%;position: absolute;
+                        border: 2px solid white;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 0;
+            
+                        @include media-min-width(48rem) {
+                            width: 4.3rem;
+                            height: 4.3rem;
+                        }
+            
+                        svg {
+                            width: 1.1rem;
+                            height: 1.1rem;
+                            margin-left: 4px;
+                            
+                            @include media-min-width(48rem) {
+                                width: 1.4rem;
+                                height: 1.4rem;
+                            }
+        
+                            path {
+                                stroke: $white-colour;
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.details {
+                height: 5.25rem;
+                width: 100%;
+                grid-template-columns: 1.5fr 1fr;
+                padding: 15px 24px;
+                display: none;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                background-color: #FAFAFA;
+
+                div {
+                    h3, p {
+                        font-size: 1rem;
+                    }
+                    h3 {
+                        margin-bottom: 6px;
+                    }
+
+                    p {
+                        color: $grey-color;
+                    }
+                }
+                
+                p {
+                    justify-self: end;
+                    font-size: 0.8rem;
+                    color: $black-color;
+                }
+            }
+        } 
+    }
+}
+
+section#pictures {
+    margin-top: 90px;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    
+}

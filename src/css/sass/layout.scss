@@ -193,11 +193,131 @@ footer {
         column-gap: 20px;
 
         @include media-min-width(64rem) {
-            column-gap: 90px;
+            column-gap: 50px;
         }
 
         li {
             display: grid;
+        }
+    }
+}
+
+#emergency-contact {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 21rem));
+        justify-content: center;
+        grid-auto-rows: 29.56rem;
+        row-gap: 82px;
+        column-gap: 20px;
+
+        @include media-min-width(64rem) {
+            column-gap: 50px;
+        }
+
+        li {
+            // display: grid;
+        }
+    }
+}
+
+// Gallery 
+
+section#videos {
+    ul {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+        grid-auto-rows: 21.94rem;
+        row-gap: 82px;
+        column-gap: 20px;
+        justify-items: center;
+        
+        @include media-min-width(48rem) {
+            // grid-template-columns: repeat(auto-fit, minmax(17rem, 21rem));
+            // column-gap: 50px;
+        }
+
+        @include media-min-width(64rem) {
+            column-gap: 50px;
+        }
+
+        li {
+            // display: grid;
+        }
+    }
+}
+
+section#pictures {
+    div.container {
+        display: grid;
+        justify-content: center;
+        row-gap: 33px;
+        column-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+        grid-auto-rows: 13.13rem;
+        
+        @include media-min-width(48rem) {
+            
+        }
+        
+        @include media-min-width(64rem) {
+            grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+            grid-template-rows: 14.44rem 28rem;
+            grid-template-areas: 'img1 img2 img3'
+                                 'img4 img2 img5';
+        }
+
+        div {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+            &.img1 {
+                @include media-min-width(64rem) {
+                    grid-area: img1;
+                }
+            }
+
+            &.img2 {
+                @include media-min-width(64rem) {
+                    grid-area: img2;
+                }
+            }
+
+            &.img3 {
+                @include media-min-width(64rem) {
+                    grid-area: img3;
+                }
+            }
+
+            &.img4 {
+                @include media-min-width(64rem) {
+                    grid-area: img4;
+                }
+            }
+
+            &.img5 {
+                @include media-min-width(64rem) {
+                    grid-area: img5;
+                }
+            }
+
+            img {
+                height: 100%;
+                &:first-of-type {
+                    display: none;
+                    @include media-min-width(64rem) {
+                        display: block;
+                    }
+                }
+
+                &:last-of-type {
+                    @include media-min-width(64rem) {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }

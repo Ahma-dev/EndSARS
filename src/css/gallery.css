@@ -1,0 +1,174 @@
+@media (min-width: 48rem) {
+  header {
+    padding: 20px 24px 20px 24px; } }
+@media (min-width: 64rem) {
+  header {
+    padding: 20px 120px 20px 120px; } }
+header div .logo {
+  color: #333333; }
+header button hr {
+  border-color: #333333; }
+
+main {
+  padding: 0 24px;
+  padding-top: 129px; }
+  @media (min-width: 64rem) {
+    main {
+      padding: 0 120px;
+      padding-top: 129px;
+      padding-bottom: 153px; } }
+
+@media (min-width: 48rem) {
+  section#top-vid div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; } }
+section#top-vid div:first-of-type h2 {
+  text-align: left; }
+section#top-vid div:first-of-type a.media {
+  width: 205px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #005A00;
+  color: #ffffff;
+  margin-top: 13px; }
+  @media (min-width: 48rem) {
+    section#top-vid div:first-of-type a.media {
+      margin-top: 0; } }
+section#top-vid div:last-of-type {
+  width: 100%;
+  margin-top: 43px;
+  position: relative; }
+  section#top-vid div:last-of-type img {
+    width: 100%; }
+  section#top-vid div:last-of-type div.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    cursor: pointer; }
+    section#top-vid div:last-of-type div.overlay div {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      position: absolute;
+      border: 2px solid white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0; }
+      @media (min-width: 48rem) {
+        section#top-vid div:last-of-type div.overlay div {
+          width: 4.3rem;
+          height: 3.3rem; } }
+      section#top-vid div:last-of-type div.overlay div svg {
+        width: 1.1rem;
+        height: 1.1rem;
+        margin-left: 4px; }
+        @media (min-width: 48rem) {
+          section#top-vid div:last-of-type div.overlay div svg {
+            width: 1.4rem;
+            height: 1.4rem; } }
+        section#top-vid div:last-of-type div.overlay div svg path {
+          stroke: #ffffff; }
+
+section#videos {
+  margin-top: 90px; }
+  section#videos h2 {
+    text-align: center;
+    padding-bottom: 30px; }
+  section#videos ul li {
+    width: 100%;
+    max-width: 20.44rem;
+    position: relative;
+    overflow: hidden; }
+    section#videos ul li:hover {
+      display: grid;
+      grid-template-rows: 16.69rem 5.25rem;
+      grid-template-areas: 'image' 'details'; }
+      section#videos ul li:hover div.image {
+        grid-area: image; }
+      section#videos ul li:hover div.details {
+        grid-area: details;
+        display: grid; }
+    section#videos ul li div.image {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      overflow: hidden;
+      height: 100%;
+      position: relative; }
+      section#videos ul li div.image img {
+        height: 21.94rem; }
+      section#videos ul li div.image div.overlay {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        cursor: pointer; }
+        section#videos ul li div.image div.overlay div {
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 50%;
+          position: absolute;
+          border: 2px solid white;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 0; }
+          @media (min-width: 48rem) {
+            section#videos ul li div.image div.overlay div {
+              width: 4.3rem;
+              height: 4.3rem; } }
+          section#videos ul li div.image div.overlay div svg {
+            width: 1.1rem;
+            height: 1.1rem;
+            margin-left: 4px; }
+            @media (min-width: 48rem) {
+              section#videos ul li div.image div.overlay div svg {
+                width: 1.4rem;
+                height: 1.4rem; } }
+            section#videos ul li div.image div.overlay div svg path {
+              stroke: #ffffff; }
+    section#videos ul li div.details {
+      height: 5.25rem;
+      width: 100%;
+      grid-template-columns: 1.5fr 1fr;
+      padding: 15px 24px;
+      display: none;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      background-color: #FAFAFA; }
+      section#videos ul li div.details div h3, section#videos ul li div.details div p {
+        font-size: 1rem; }
+      section#videos ul li div.details div h3 {
+        margin-bottom: 6px; }
+      section#videos ul li div.details div p {
+        color: #666666; }
+      section#videos ul li div.details p {
+        justify-self: end;
+        font-size: 0.8rem;
+        color: #333333; }
+
+section#pictures {
+  margin-top: 90px; }
+  section#pictures h2 {
+    text-align: center;
+    padding-bottom: 30px; }
+
+/*# sourceMappingURL=gallery.css.map */

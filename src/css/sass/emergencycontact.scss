@@ -1,0 +1,116 @@
+@import "_variables.scss";
+
+@mixin media-min-width($width) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin media-max-width($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+header {
+    @include media-min-width(48rem) {
+        padding: 20px 24px 20px 24px;
+    }
+
+    @include media-min-width(64rem) {
+        padding: 20px 120px 20px 120px;
+    }
+
+    div .logo {
+       color: $black-color;
+   }
+
+   button hr {
+       border-color: $black-color;
+   }
+}
+
+main {
+    padding: 0 24px;
+    padding-top: 129px;
+    
+    @include media-min-width(64rem) {
+        padding: 0 120px;
+        padding-top: 129px;
+    }
+}
+
+section#emergency-contact {
+    div {
+        @include media-min-width(48rem) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: left;
+            max-width: 43.25rem;
+        }
+
+    }
+    ul {
+        padding-top: 58px;
+        padding-bottom: 50px;
+        @include media-min-width(48rem) {
+            padding-bottom: 130px;
+        }
+        
+        li {
+            div:first-of-type {
+                overflow: hidden;
+                display: flex;
+                justify-content: center;    
+                max-width: 22.94rem;
+                min-width: 19rem;
+                img {
+                    height: 100%;
+                }
+            }
+            text-align: left;
+            h4 {
+                font-size: 1.6rem;
+                font-weight: 700;
+                margin: 20px 0 14px 0;
+
+                @include media-min-width(48rem) {
+                    font-size: 2rem;
+                }
+            }
+            div.links {
+                display: flex;
+                justify-content: flex-start;
+                a {
+                    width: 49px;
+                    height: 49px;
+                    border-radius: 50%;
+                    background-color: $white-colour;
+                    box-shadow: 0px 8px 20px rgba(51, 51, 51, 0.15);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 19px;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        box-shadow: 0px 8px 20px rgba(51, 51, 51, 0.253);
+                    }
+
+                    svg {
+                        // width: 6px;
+                        height: 20px;
+                
+                        path {
+                            stroke: $black-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
