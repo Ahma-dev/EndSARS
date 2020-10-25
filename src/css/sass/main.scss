@@ -25,6 +25,21 @@
     }
 }
 
+@mixin display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    transition: 0.5s;
+    background-color: rgba(112, 112, 112, 0.5);
+    display: none;
+  }
+
 h2, h3, h4, p {
     color: $black-color;
 }
@@ -56,9 +71,7 @@ p {
 a.donate-btn, a.signup-btn {
     width: 7.93rem;
     height: 2.93rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-flex();
     background-color: $red-color;
     color: $white-colour;
     
@@ -69,6 +82,61 @@ a.donate-btn, a.signup-btn {
 
         path {
             stroke: $white-colour;
+        }
+    }
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    right: 0;
+    width: 15rem;
+    background-color: #ffffff;
+    text-align: center;
+    height: 100vh;
+    z-index: 100;
+    transition: 0.5s;
+    // position: relative;
+
+    button.close-nav-btn {
+        background-color: #ffffff;
+        border: none;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        color: $black-color;
+        transition: 0.5s;
+
+        &:focus {
+            outline: none;
+        }
+      }
+      
+      button.close-nav-btn svg {
+        width: 2rem;
+      }
+    
+    ul {
+        @include display-flex();
+        flex-direction: column;
+        height: 100%;
+
+        li {
+            margin-bottom: 15px;
+            a {
+                color: $white-colour;
+                padding: 15px;
+                border-radius: 8px;
+                background-color: $black-color;
+                width: 7rem;
+                display: jus;
+                height: 2.5rem;
+                @include display-flex();
+                &:hover {
+                    color: $black-color;
+                    background-color: $white-colour;
+                }
+            }
         }
     }
 }
@@ -246,7 +314,7 @@ div.endsars {
     }
 }
 
-section#wwaff {
+section#cause {
     background-color: $light-grey-color;
     @include media-min-width(48rem) {
         background-color: transparent;
@@ -546,9 +614,8 @@ section#emer-contact {
             }
 
             div.twitter {
-                display: flex;
+                @include display-flex();
                 justify-content: flex-start;
-                align-items: center;
                 margin: 0; 
                 margin-top: 17px;
                 div {
@@ -558,9 +625,7 @@ section#emer-contact {
                     margin: 0;
                     margin-right: 17px;
                     background-color: $red-color;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include display-flex();
                     svg {
                         width: 22px;
                         path {
@@ -655,9 +720,8 @@ footer {
                 margin: 10px 0;
                 font-size: 1rem;
                 color: $black-color;
-                display: flex;
+                @include display-flex();
                 justify-content: flex-start;
-                align-items: center;
 
                 svg {
                     // width: 18px;

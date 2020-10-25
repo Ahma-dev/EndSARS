@@ -52,11 +52,11 @@ section#about .about__img {
       justify-self: end; } }
 
 @media (min-width: 48rem) {
-  section#wwaff {
+  section#cause {
     display: grid;
     grid-template-columns: 25rem 1fr; } }
 @media (min-width: 64rem) {
-  section#wwaff {
+  section#cause {
     grid-template-columns: 1fr 39.25rem; } }
 
 @media (min-width: 48rem) {
@@ -198,6 +198,14 @@ section#pictures div.container {
         section#pictures div.container div img:last-of-type {
           display: none; } }
 
+#overlay {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  transition: 0.5s;
+  background-color: rgba(112, 112, 112, 0.5);
+  display: none; }
+
 h2, h3, h4, p {
   color: #333333; }
 
@@ -235,6 +243,51 @@ a.donate-btn, a.signup-btn {
     margin-left: 19px; }
     a.donate-btn svg path, a.signup-btn svg path {
       stroke: #ffffff; }
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  right: 0;
+  width: 15rem;
+  background-color: #ffffff;
+  text-align: center;
+  height: 100vh;
+  z-index: 100;
+  transition: 0.5s; }
+  .mobile-nav button.close-nav-btn {
+    background-color: #ffffff;
+    border: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #333333;
+    transition: 0.5s; }
+    .mobile-nav button.close-nav-btn:focus {
+      outline: none; }
+  .mobile-nav button.close-nav-btn svg {
+    width: 2rem; }
+  .mobile-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%; }
+    .mobile-nav ul li {
+      margin-bottom: 15px; }
+      .mobile-nav ul li a {
+        color: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #333333;
+        width: 7rem;
+        display: jus;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .mobile-nav ul li a:hover {
+          color: #333333;
+          background-color: #ffffff; }
 
 header {
   position: absolute;
@@ -350,39 +403,39 @@ div.endsars {
       div.endsars p {
         font-size: 4.3rem; } }
 
-section#wwaff {
+section#cause {
   background-color: #F2F2F2; }
   @media (min-width: 48rem) {
-    section#wwaff {
+    section#cause {
       background-color: transparent;
       padding-right: 24px; } }
   @media (min-width: 64rem) {
-    section#wwaff {
+    section#cause {
       padding-right: 120px; } }
   @media (min-width: 48rem) {
-    section#wwaff div.image {
+    section#cause div.image {
       background: no-repeat center/cover url(../img/ladyfistupimage.png); } }
-  section#wwaff div.image img {
+  section#cause div.image img {
     width: 100%; }
     @media (min-width: 48rem) {
-      section#wwaff div.image img {
+      section#cause div.image img {
         display: none; } }
-  section#wwaff div:nth-of-type(2) {
+  section#cause div:nth-of-type(2) {
     padding: 44px 0 36px 0;
     margin: 0 auto; }
     @media (min-width: 48rem) {
-      section#wwaff div:nth-of-type(2) {
+      section#cause div:nth-of-type(2) {
         padding: 0;
         margin: 0;
         max-width: 43.2rem; } }
     @media (min-width: 48rem) {
-      section#wwaff div:nth-of-type(2) h2 {
+      section#cause div:nth-of-type(2) h2 {
         padding: 16px 0 16px 82px;
         text-align: left; } }
-    section#wwaff div:nth-of-type(2) div {
+    section#cause div:nth-of-type(2) div {
       padding: 40px 43px 0 29px; }
       @media (min-width: 48rem) {
-        section#wwaff div:nth-of-type(2) div {
+        section#cause div:nth-of-type(2) div {
           background-color: #F2F2F2;
           padding: 81px 51px 94px 82px; } }
 
@@ -554,8 +607,9 @@ section#emer-contact {
             font-weight: 700; }
       section#emer-contact div.outer address div.twitter {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+        justify-content: flex-start;
         margin: 0;
         margin-top: 17px; }
         section#emer-contact div.outer address div.twitter div {
@@ -631,8 +685,9 @@ footer {
         font-size: 1rem;
         color: #333333;
         display: flex;
-        justify-content: flex-start;
-        align-items: center; }
+        justify-content: center;
+        align-items: center;
+        justify-content: flex-start; }
         footer div:nth-of-type(2) ul li svg {
           margin-right: 6px; }
           footer div:nth-of-type(2) ul li svg path {
